@@ -144,3 +144,5 @@ var characterList = [
         ]
     },
 ]
+
+module.exports = characterList
