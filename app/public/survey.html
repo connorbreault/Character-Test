@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -32,19 +33,50 @@
             font-size: 20px
         }
 
+        #head {
+            font-family: 'Satisfy', cursive;
+            background: #c13b3a;
+            width: 50%;
+            height: fit-content;
+            padding: 10px;
+            text-decoration: underline;
+            color: gold;
+            text-decoration-color: white;
+            font-size: 60px;
+            border: black inset;
+            margin: auto;
+        }
+
+        #about {
+            background: green;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border: black outset 2px;
+        }
+
         h2 {
             background: #5fa0e0;
-            width: auto;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border: black outset 2px;
         }
 
         h3 {
             background: #c13b3a;
-            width: auto;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border: black outset 2px;
         }
 
         h4 {
             background: #ced442;
-            width: auto;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border: black outset 2px;
         }
 
         #submit {
@@ -52,6 +84,11 @@
             border: green;
             width: 40%;
             margin: auto;
+        }
+
+        #submit:hover {
+            border: black outset 2px;
+            color: black
         }
     </style>
 
@@ -61,17 +98,22 @@
 
     <div class="container">
         <br>
-        <h1>Survey Questions</h1>
+        <h1 id="head">Survey Questions</h1>
+        <br>
+        <h1 id="about">About You</h1>
         <hr>
-        <h1>About You</h1>
         <h2>Name (Required)</h2>
+        <br>
         <input type="text" id="name" class="form-control" required="">
         <br>
         <h2>Link to Photo Image (Required)</h2>
+        <br>
         <input type="text" id="photo" class="form-control" required="">
         <hr>
         <h3>Question #1</h3>
+        <br>
         <h4>The safety of others is of the utmost importance.</h4>
+        <br>
         <select class="chosen-select" id="q1">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -82,7 +124,9 @@
         </select>
         <br><br>
         <h3>Question #2</h3>
+        <br>
         <h4>I got my mind on my money and my money on my mind.</h4>
+        <br>
         <select class="chosen-select" id="q2">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -93,7 +137,9 @@
         </select>
         <br><br>
         <h3>Question #3</h3>
+        <br>
         <h4>I enjoy creating music.</h4>
+        <br>
         <select class="chosen-select" id="q3">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -104,7 +150,9 @@
         </select>
         <br><br>
         <h3>Question #4</h3>
+        <br>
         <h4>I enjoy being mischievous.</h4>
+        <br>
         <select class="chosen-select" id="q4">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -115,7 +163,9 @@
         </select>
         <br><br>
         <h3>Question #5</h3>
+        <br>
         <h4>The meaning of life is romance.</h4>
+        <br>
         <select class="chosen-select" id="q5">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -126,7 +176,9 @@
         </select>
         <br><br>
         <h3>Question #6</h3>
+        <br>
         <h4>I love wine.</h4>
+        <br>
         <select class="chosen-select" id="q6">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -137,7 +189,9 @@
         </select>
         <br><br>
         <h3>Question #7</h3>
+        <br>
         <h4>I enjoy DIY projects or fixing broken things around the house.</h4>
+        <br>
         <select class="chosen-select" id="q7">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -148,7 +202,9 @@
         </select>
         <br><br>
         <h3>Question #8</h3>
+        <br>
         <h4>Farts are hilarious.</h4>
+        <br>
         <select class="chosen-select" id="q8">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -159,7 +215,9 @@
         </select>
         <br><br>
         <h3>Question #9</h3>
+        <br>
         <h4>I like to sing and dance.</h4>
+        <br>
         <select class="chosen-select" id="q9">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -170,7 +228,9 @@
         </select>
         <br><br>
         <h3>Question #10</h3>
+        <br>
         <h4>Do you think horses get songs stuck in their heads?</h4>
+        <br>
         <select class="chosen-select" id="q10">
             <option selected value="0">Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>

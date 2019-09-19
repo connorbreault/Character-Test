@@ -9,12 +9,79 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script|Sigmar+One&display=swap" rel="stylesheet">
 
+    <style>
+        body {
+            background-image: url("https://images2.alphacoders.com/483/thumb-1920-483951.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            text-align: center;
+            font-family: 'Bubblegum Sans', cursive;
+        }
+
+        .left {
+            color: red;
+            margin: 10% 70% 0% 0%;
+            font-family: 'Sigmar One', cursive;
+            transform: rotate(-10deg);
+        }
+
+        .right {
+            margin: 12% 0% 0% 60%;
+            color: red;
+            font-family: 'Sigmar One', cursive;
+        }
+
+        h3 {
+            font-size: 55px;
+            text-decoration: underline;
+            text-decoration-color: goldenrod;
+            font-style: italic;
+        }
+
+        p {
+            font-size: 35px
+        }
+
+        .btn {
+            background: #f2ed4d;
+            border: #ed3833 outset 2px;
+            color: #ed3833;
+            border-radius: 2px;
+            text-decoration: underline black
+        }
+
+        .btn:hover {
+            background: #ed3833;
+            border: black outset 2px;
+            color: black;
+            text-decoration: underline #f2ed4d
+        }
+
+        #start {}
+    </style>
 </head>
 
 <body>
+    <div class="container">
+        <div class="left">
+            <h3>CHARACTER TEST!</h3>
+        </div>
 
-
+        <div class="right">
+            <p>Click here to start your survey and find out what character you are!</p>
+            <a href="/survey"><button type="button" class="btn btn-lg btn-primary">
+                    <h4 id="start">start</h4>
+                </button></a>
+        </div>
+    </div>
 
 </body>
 

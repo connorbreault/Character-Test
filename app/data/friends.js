@@ -3,47 +3,47 @@ var characterList = [
         name: "Bob",
         photo: "https://vignette.wikia.nocookie.net/bobs-burgers-fanon/images/5/51/Bob_with_a_burger.png/revision/latest?cb=20170920181424",
         scores: [
-            1,
+            4,
+            4,
+            3,
             2,
             3,
             4,
-            5,
-            1,
+            3,
             2,
             3,
-            4,
-            5
+            1
         ]
     },
     {
         name: "Linda",
         photo: "https://vignette.wikia.nocookie.net/bobsburgerpedia/images/b/b7/Lindab.png/revision/latest?cb=20130113071354",
         scores: [
-            1,
-            2,
+            4,
             3,
+            4,
+            2,
             4,
             5,
-            1,
             2,
-            3,
-            4,
-            5
+            1,
+            5,
+            2
         ]
     },
     {
         name: "Tina",
         photo: "https://cdn.imgbin.com/15/25/17/imgbin-giphy-dance-tenor-tina-belcher-others-xuwMeMC4Zjkg7jgq50mm51Y23.jpg",
         scores: [
-            1,
-            2,
             3,
-            4,
+            1,
+            3,
+            2,
             5,
             1,
+            3,
             2,
             3,
-            4,
             5
         ]
     },
@@ -51,16 +51,16 @@ var characterList = [
         name: "Gene",
         photo: "https://static.simpsonswiki.com/images/thumb/b/b7/Gene_Belcher.png/200px-Gene_Belcher.png",
         scores: [
-            1,
             2,
-            3,
-            4,
+            1,
             5,
-            1,
-            2,
             3,
+            2,
+            1,
+            3,
+            5,
             4,
-            5
+            4
         ]
     },
     {
