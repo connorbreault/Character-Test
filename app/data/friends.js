@@ -67,48 +67,48 @@ var characterList = [
         name: "Louise",
         photo: "https://vignette.wikia.nocookie.net/bobsburgerpedia/images/b/b9/Louise_render.png/revision/latest?cb=20130113075349",
         scores: [
-            1,
             2,
-            3,
             4,
+            3,
             5,
-            1,
             2,
+            1,
             3,
+            1,
             4,
-            5
+            4
         ]
     },
     {
         name: "Teddy",
         photo: "https://vignette.wikia.nocookie.net/bobsburgerpedia/images/5/5e/Teddy.png/revision/latest?cb=20130305230745",
         scores: [
-            1,
-            2,
-            3,
             4,
+            3,
+            2,
+            1,
+            4,
+            3,
             5,
-            1,
-            2,
             3,
-            4,
-            5
+            3,
+            2
         ]
     },
     {
         name: "Mort",
         photo: "https://vignette.wikia.nocookie.net/bobsburgerpedia/images/8/81/Mort2.png/revision/latest?cb=20130305233503",
         scores: [
+            3,
+            3,
             1,
             2,
-            3,
             4,
-            5,
-            1,
+            4,
+            3,
             2,
-            3,
-            4,
-            5
+            1,
+            2
         ]
     },
     {
@@ -116,31 +116,31 @@ var characterList = [
         photo: "https://vignette.wikia.nocookie.net/bobsburgerpedia/images/7/7e/Mr._Fischoeder.png/revision/latest?cb=20130305161036",
         scores: [
             1,
-            2,
-            3,
-            4,
             5,
-            1,
+            3,
+            5,
+            2,
+            4,
             2,
             3,
             4,
-            5
+            1
         ]
     },
     {
         name: "Hugo",
         photo: "https://vignette.wikia.nocookie.net/bobsburgerpedia/images/1/17/Hugo_Habercore.png/revision/latest?cb=20130305170235",
         scores: [
-            1,
-            2,
-            3,
-            4,
             5,
-            1,
-            2,
-            3,
             4,
-            5
+            2,
+            1,
+            4,
+            4,
+            3,
+            1,
+            3,
+            1
         ]
     },
 ]
