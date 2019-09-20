@@ -11,7 +11,7 @@ module.exports = function (app) {
     // --- Add new character to character list --- //
     app.post("/api/friends", function (req, res) {
         console.log(req.body);
-        // characterData.push(req.body);
-        // res.json(true);
+        characterData.push(req.body);
+        res.json(true);
     });
 }
