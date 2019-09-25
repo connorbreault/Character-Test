@@ -33,7 +33,7 @@ var characterList = [
     },
     {
         name: "Tina",
-        photo: "https://cdn.imgbin.com/15/25/17/imgbin-giphy-dance-tenor-tina-belcher-others-xuwMeMC4Zjkg7jgq50mm51Y23.jpg",
+        photo: "https://vignette.wikia.nocookie.net/bobsburgerpedia/images/6/6e/Tina_render.png/revision/latest?cb=20130113192209",
         scores: [
             3,
             1,

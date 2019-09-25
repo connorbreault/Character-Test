@@ -287,11 +287,11 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h2>The character you are closest to is...</h2>
+                        <h2 class="drumrollPlease">The character you are closest to is...</h2>
                         <hr>
                         <div class="matchName">Error.. Try again..</div>
                         <br>
-                        <div><img src="" alt="" class="matchPic"></div>
+                        <div class="picContainer"><img src="" alt="" class="matchPic"></div>
                         <br>
                         <h3 id="startOverText">Click below to start over!</h3>
                         <br>
@@ -309,41 +309,46 @@
 
         $("#submit").on("click", function () {
 
-            var newCharacter = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val()
-                ]
-            }
-
-            $.post("/api/friends", newCharacter,
-                function (data) {
-
-                    if (data) {
-                        getBest()
-                    }
+            if ($("#name").val() === "" || $("#photo").val() === "") {
+                $(".drumrollPlease").html("Error...")
+                $(".matchName").html("Please ensure you added a name and photo link")
+            } else {
+                var newCharacter = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
                 }
-            );
 
-            function getBest() {
-                $.get("/api/friends", function (data) {
-                    for (var i = 0; i < data.length; i++) {
-                        if (data[i].scores === "match") {
-                            $(".matchName").html(data[i].name)
-                            $(".matchPic").attr("src", data[i].photo)
+                $.post("/api/friends", newCharacter,
+                    function (data) {
+
+                        if (data) {
+                            getBest()
                         }
                     }
-                });
+                );
+
+                function getBest() {
+                    $.get("/api/friends", function (data) {
+                        for (var i = 0; i < data.length; i++) {
+                            if (data[i].scores === "match") {
+                                $(".matchName").html(data[i].name)
+                                $(".matchPic").attr("src", data[i].photo)
+                            }
+                        }
+                    });
+                }
             }
         })
     </script>
