@@ -97,8 +97,16 @@
             color: #c13b3a
         }
 
-        #exampleModalLabel {
-            text-align: center
+        .matchName {
+            font-size: 45px;
+            background: green;
+            color: white;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            border: outset black 2px;
+            width: fit-content;
+            margin: auto;
+            padding: 5px 40px;
         }
 
         #startOverText {
@@ -107,6 +115,12 @@
 
         #tryAgain {
             background: green;
+            border: black outset 2px
+        }
+
+        #tryAgain:hover {
+            color: black;
+            background: #c13b3a
         }
     </style>
 
@@ -273,28 +287,25 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h2>Character added!</h2>
-                        <hr>
                         <h2>The character you are closest to is...</h2>
-                        <div class="matchName">Error..</div>
-                        <div class="matchPic">Error..</div>
-                        <div class="matchScores">Error..</div>
-                        <h3 id="startOverText">Click here to start over!</h3>
+                        <hr>
+                        <div class="matchName">Error.. Try again..</div>
+                        <br>
+                        <div><img src="" alt="" class="matchPic"></div>
+                        <br>
+                        <h3 id="startOverText">Click below to start over!</h3>
                         <br>
                         <a href="/"><button type="button" class="btn btn-lg btn-primary" id="tryAgain">
                                 Try again
                             </button></a>
                     </div>
-                    <div class="modal-footer">
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
     <script>
-
-        var q1 = parseInt($("#q1").val())
 
         $("#submit").on("click", function () {
 
@@ -302,8 +313,8 @@
                 name: $("#name").val(),
                 photo: $("#photo").val(),
                 scores: [
-                    q1,
-                    parseInt($("#q2").val()),
+                    $("#q1").val(),
+                    $("#q2").val(),
                     $("#q3").val(),
                     $("#q4").val(),
                     $("#q5").val(),
@@ -315,20 +326,25 @@
                 ]
             }
 
-            console.log(q1)
             $.post("/api/friends", newCharacter,
                 function (data) {
 
-                    // If a table is available... tell user they are booked.
                     if (data) {
-
+                        getBest()
                     }
+                }
+            );
 
-                    // If a table is available... tell user they on the waiting list.
-                    else {
-                        alert("Error");
+            function getBest() {
+                $.get("/api/friends", function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].scores === "match") {
+                            $(".matchName").html(data[i].name)
+                            $(".matchPic").attr("src", data[i].photo)
+                        }
                     }
                 });
+            }
         })
     </script>
 
