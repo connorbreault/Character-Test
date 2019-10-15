@@ -137,10 +137,6 @@
         <h2>Name (Required)</h2>
         <br>
         <input type="text" id="name" class="form-control" required="">
-        <br>
-        <h2>Link to Photo Image (Required)</h2>
-        <br>
-        <input type="text" id="photo" class="form-control" required="">
         <hr>
         <h3>Question #1</h3>
         <br>
@@ -309,13 +305,12 @@
 
         $("#submit").on("click", function () {
 
-            if ($("#name").val() === "" || $("#photo").val() === "") {
+            if ($("#name").val() === "") {
                 $(".drumrollPlease").html("Error...")
-                $(".matchName").html("Please ensure you added a name and photo link")
+                $(".matchName").html("Please ensure you added a name")
             } else {
                 var newCharacter = {
                     name: $("#name").val(),
-                    photo: $("#photo").val(),
                     scores: [
                         $("#q1").val(),
                         $("#q2").val(),
