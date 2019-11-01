@@ -134,10 +134,6 @@
         <br>
         <h1 id="about">About You</h1>
         <hr>
-        <h2>Name (Required)</h2>
-        <br>
-        <input type="text" id="name" class="form-control" required="">
-        <hr>
         <h3>Question #1</h3>
         <br>
         <h4>The safety of others is of the utmost importance.</h4>
@@ -304,46 +300,40 @@
     <script>
 
         $("#submit").on("click", function () {
+            var newCharacter = {
+                name: $("#name").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            }
 
-            if ($("#name").val() === "") {
-                $(".drumrollPlease").html("Error...")
-                $(".matchName").html("Please ensure you added a name")
-            } else {
-                var newCharacter = {
-                    name: $("#name").val(),
-                    scores: [
-                        $("#q1").val(),
-                        $("#q2").val(),
-                        $("#q3").val(),
-                        $("#q4").val(),
-                        $("#q5").val(),
-                        $("#q6").val(),
-                        $("#q7").val(),
-                        $("#q8").val(),
-                        $("#q9").val(),
-                        $("#q10").val()
-                    ]
+            $.post("/api/friends", newCharacter,
+                function (data) {
+
+                    if (data) {
+                        getBest()
+                    }
                 }
+            );
 
-                $.post("/api/friends", newCharacter,
-                    function (data) {
-
-                        if (data) {
-                            getBest()
+            function getBest() {
+                $.get("/api/friends", function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].scores === "match") {
+                            $(".matchName").html(data[i].name)
+                            $(".matchPic").attr("src", data[i].photo)
                         }
                     }
-                );
-
-                function getBest() {
-                    $.get("/api/friends", function (data) {
-                        for (var i = 0; i < data.length; i++) {
-                            if (data[i].scores === "match") {
-                                $(".matchName").html(data[i].name)
-                                $(".matchPic").attr("src", data[i].photo)
-                            }
-                        }
-                    });
-                }
+                });
             }
         })
     </script>

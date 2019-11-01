@@ -1,0 +1,8 @@
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url("https://i.pinimg.com/originals/e9/87/af/e987afebc88368faaa38b6bd7148b105.jpg") !important
+    }
+}
+.hi{
+    font-size: 50px
+}
