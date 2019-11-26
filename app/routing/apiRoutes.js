@@ -43,8 +43,6 @@ module.exports = function (app) {
                     var currentUserScore = userScores[j]
                     let currentTotal = totalDifference
                     totalDifference = currentTotal + Math.abs(parseInt(currentFriendScore) - parseInt(currentUserScore))
-                    console.log(currentCompare.name + " current: " + totalDifference + " = " + currentFriendScore + " - " + currentUserScore)
-
                 } if (totalDifference <= bestMatch.friendDifference) {
                     bestMatch.name = currentCompare.name;
                     bestMatch.photo = currentCompare.photo;
@@ -58,7 +56,5 @@ module.exports = function (app) {
             }
         }
         characterData.push(newCharacter)
-        console.log("=====>>>>" + newCharacter.name)
-        console.log(bestMatch)
     });
 }

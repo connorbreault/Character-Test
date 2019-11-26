@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <title>Friend survey</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
 
@@ -34,25 +38,27 @@
         }
 
         #head {
-            font-family: 'Satisfy', cursive;
             background: #c13b3a;
-            width: 50%;
-            height: fit-content;
-            padding: 10px;
-            text-decoration: underline;
-            color: gold;
-            text-decoration-color: white;
-            font-size: 60px;
             border: black inset;
             margin: auto;
+            font-family: 'Satisfy', cursive;
+            color: gold;
+            text-decoration: underline;
+            text-decoration-color: white;
+            font-size: 150px;
+            padding: 10px;
+            width: fit-content;
+            height: fit-content;
         }
 
         #about {
             background: green;
             width: fit-content;
             margin: auto;
-            padding: 5px;
+            padding: 15px;
             border: black outset 2px;
+            font-size: 100px;
+            border-radius: 15px
         }
 
         h2 {
@@ -61,14 +67,17 @@
             margin: auto;
             padding: 5px;
             border: black outset 2px;
+            border-radius: 15px
         }
 
         h3 {
             background: #c13b3a;
             width: fit-content;
             margin: auto;
-            padding: 5px;
+            padding: 10px;
             border: black outset 2px;
+            font-size: 70px;
+            border-radius: 15px
         }
 
         h4 {
@@ -76,19 +85,40 @@
             width: fit-content;
             margin: auto;
             padding: 5px;
-            border: black outset 2px;
+            border: #000000 outset 2px;
+            font-size: 75px;
+            border-radius: 15px
+        }
+
+        .quest {
+            margin: 50px auto
+        }
+
+        .question-select {
+            background: green;
+            font-size: 70px;
+            border: solid 1px black;
+            margin: 50px auto
+        }
+
+        .question-select:hover {
+            background: white;
+            border: green;
+            color: green;
+            border: solid 2px green;
         }
 
         #submit {
-            background: green;
-            border: green;
+            border: 1px solid black;
             width: 40%;
-            margin: auto;
+            background: green;
+            margin: 25px auto;
         }
 
         #submit:hover {
-            border: black outset 2px;
-            color: black
+            border: green outset 2px;
+            color: green;
+            background: white
         }
 
         #modalBack {
@@ -134,163 +164,42 @@
         <br>
         <h1 id="about">About You</h1>
         <hr>
-        <h3>Question #1</h3>
-        <br>
-        <h4>The safety of others is of the utmost importance.</h4>
-        <br>
-        <select class="chosen-select" id="q1">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #2</h3>
-        <br>
-        <h4>I got my mind on my money and my money on my mind.</h4>
-        <br>
-        <select class="chosen-select" id="q2">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #3</h3>
-        <br>
-        <h4>I enjoy creating music.</h4>
-        <br>
-        <select class="chosen-select" id="q3">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #4</h3>
-        <br>
-        <h4>I enjoy being mischievous.</h4>
-        <br>
-        <select class="chosen-select" id="q4">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #5</h3>
-        <br>
-        <h4>The meaning of life is romance.</h4>
-        <br>
-        <select class="chosen-select" id="q5">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #6</h3>
-        <br>
-        <h4>I love wine.</h4>
-        <br>
-        <select class="chosen-select" id="q6">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #7</h3>
-        <br>
-        <h4>I enjoy DIY projects or fixing broken things around the house.</h4>
-        <br>
-        <select class="chosen-select" id="q7">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #8</h3>
-        <br>
-        <h4>Farts are hilarious.</h4>
-        <br>
-        <select class="chosen-select" id="q8">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #9</h3>
-        <br>
-        <h4>I like to sing and dance.</h4>
-        <br>
-        <select class="chosen-select" id="q9">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
-        <h3>Question #10</h3>
-        <br>
-        <h4>Do you think horses get songs stuck in their heads?</h4>
-        <br>
-        <select class="chosen-select" id="q10">
-            <option selected value=0>Select an option</option>
-            <option value=1>1 (Strongly Disagree)</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5>5 (Strongly Agree)</option>
-        </select>
-        <br><br>
+        <div id="questionsContainer">
+        </div>
+
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" data-toggle="modal"
             data-target="#exampleModal"><i class="fa fa-check-circle" aria-hidden="true"></i>
             Submit</button>
-        <br>
+
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content" id="modalBack">
+
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Results</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+
                     <div class="modal-body">
                         <h2 class="drumrollPlease">The character you are closest to is...</h2>
                         <hr>
-                        <div class="matchName">Error.. Try again..</div>
+                        <div class="matchName">Loading..</div>
                         <br>
                         <div class="picContainer"><img src="" alt="" class="matchPic"></div>
                         <br>
                         <h3 id="startOverText">Click below to start over!</h3>
                         <br>
-                        <a href="/"><button type="button" class="btn btn-lg btn-primary" id="tryAgain">
+                        <a href="#">
+                            <button type="button" class="btn btn-lg btn-primary" id="tryAgain" data-dismiss="modal"
+                                aria-label="Close">
                                 Try again
-                            </button></a>
+                            </button>
+                        </a>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -298,6 +207,44 @@
     </div>
 
     <script>
+
+        const questions = [
+            "The safety of others is of the utmost importance.",
+            "I got my mind on my money and my money on my mind.",
+            "I enjoy creating music.",
+            "I enjoy being mischievous.",
+            "The meaning of life is romance.",
+            "I love wine.",
+            "I enjoy DIY projects or fixing broken things around the house.",
+            "Farts are hilarious.",
+            "I like to sing and dance.",
+            "Do you think horses get songs stuck in their heads?",
+        ]
+
+        for (let i = 0; i < questions.length; i++) {
+            let newQuestion = (`
+            <div class="quest">
+            <h3>Question #${i + 1}</h3>
+            <br>
+            <h4>${questions[i]}</h4>
+            <br>
+            <select class="chosen-select question-select" id="q${i + 1}">
+            <option selected value=0>Click to select an option</option>
+            <option value=1>1 (Strongly Disagree)</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5 (Strongly Agree)</option>
+            </select>
+            <br><br>
+            </div>
+            `)
+            $("#questionsContainer").append(newQuestion)
+        }
+
+        $("#tryAgain").on("click", function () {
+            location.reload();
+        })
 
         $("#submit").on("click", function () {
             var newCharacter = {
@@ -315,10 +262,8 @@
                     $("#q10").val()
                 ]
             }
-
             $.post("/api/friends", newCharacter,
                 function (data) {
-
                     if (data) {
                         getBest()
                     }
