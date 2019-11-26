@@ -247,6 +247,9 @@
         })
 
         $("#submit").on("click", function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500);
             var newCharacter = {
                 name: $("#name").val(),
                 scores: [
